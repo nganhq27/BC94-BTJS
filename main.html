@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    }
+
+    .container {
+    width: 1000px;
+    max-width: 95%;
+    margin: 20px auto;
+    }
+
+    h1 {
+    text-align: center;
+    color: #003366;
+    }
+
+    .card {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    }
+
+    .card h2 {
+    margin-top: 0;
+    color: #003366;
+    }
+
+    .form-group {
+    margin-bottom: 12px;
+    }
+
+    label {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+    input,
+    select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999999;
+    }
+
+    button {
+    padding: 10px 15px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+
+    .result {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eaf4ff;
+    border: 1px solid #99c2ff;
+    }
+
+    .hidden {
+    display: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+    <h2>1. Quản lý tuyển sinh</h2>
+
+    <div class="form-group">
+        <label for="diemChuan">Điểm chuẩn</label>
+        <input type="number" id="diemChuan">
+    </div>
+
+    <div class="form-group">
+        <label for="mon1">Điểm môn 1</label>
+        <input type="number" id="mon1">
+    </div>
+
+    <div class="form-group">
+        <label for="mon2">Điểm môn 2</label>
+        <input type="number" id="mon2">
+    </div>
+
+    <div class="form-group">
+        <label for="mon3">Điểm môn 3</label>
+        <input type="number" id="mon3">
+    </div>
+
+    <div class="form-group">
+        <label for="khuVuc">Khu vực</label>
+        <select id="khuVuc">
+        <option value="X">X</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="doiTuong">Đối tượng</label>
+        <select id="doiTuong">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </div>
+
+    <button id="btnTinhTuyenSinh">Tính kết quả</button>
+    <div class="result" id="ketQuaTuyenSinh"></div>
+    </div>
+
+
+
+
+    <div class="card">
+    <h2>2. Tính tiền điện</h2>
+
+    <div class="form-group">
+        <label for="tenDien">Họ tên</label>
+        <input type="text" id="tenDien">
+    </div>
+
+    <div class="form-group">
+        <label for="soKw">Số KW</label>
+        <input type="number" id="soKw">
+    </div>
+
+    <button id="btnTinhTienDien">Tính tiền điện</button>
+    <div class="result" id="ketQuaTienDien"></div>
+    </div>
+
+
+
+
+    <div class="card">
+    <h2>3. Thuế thu nhập cá nhân</h2>
+
+    <div class="form-group">
+        <label for="hoTenThue">Họ tên</label>
+        <input type="text" id="hoTenThue">
+    </div>
+
+    <div class="form-group">
+        <label for="tongThuNhap">Tổng thu nhập năm</label>
+        <input type="number" id="tongThuNhap">
+    </div>
+
+    <div class="form-group">
+        <label for="nguoiPhuThuoc">Số người phụ thuộc</label>
+        <input type="number" id="nguoiPhuThuoc">
+    </div>
+
+    <button id="btnTinhThue">Tính thuế</button>
+    <div class="result" id="ketQuaThue"></div>
+    </div>
+
+
+
+
+    <div class="card">
+    <h2>4. Tính tiền cáp</h2>
+
+    <div class="form-group">
+        <label for="maKhachHang">Mã khách hàng</label>
+        <input type="text" id="maKhachHang">
+    </div>
+
+    <div class="form-group">
+        <label for="loaiKhachHang">Loại khách hàng</label>
+        <select id="loaiKhachHang">
+        <option value="nhaDan">Nhà dân</option>
+        <option value="doanhNghiep">Doanh nghiệp</option>
+        </select>
+    </div>
+
+    <div class="form-group hidden" id="ketNoiWrapper">
+        <label for="soKetNoi">Số kết nối</label>
+        <input type="number" id="soKetNoi">
+    </div>
+
+    <div class="form-group">
+        <label for="soKenhCaoCap">Số kênh cao cấp</label>
+        <input type="number" id="soKenhCaoCap">
+    </div>
+
+    <button id="btnTinhTienCap">Tính tiền cáp</button>
+    <div class="result" id="ketQuaTienCap"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
